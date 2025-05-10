@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="myform" method="post">
+        <label>Select the base currency</label><select name="basecurrency" id="currency1">
+            <div id="options"></div>
+        </select><br>
+        <label>Enter Amount</label><input type="number" min="0" id="amountInCurr" /><br>
+        <label>Select a currency to convert to</label><select name="targetcurrency" id="currency2">
+            <div id="options2"></div>
+        </select>
+        <p id="errorMsg"></p>
+        <p id="result"></p>
+        <input type="submit" value="Convert" id="currBtn">
+    </form>
+    <script src="index.js"></script>
+</body>
+
+</html>
