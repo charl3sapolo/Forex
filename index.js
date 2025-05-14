@@ -249,6 +249,7 @@ const option2 = document.getElementById('options2');
 const btn = document.getElementById('currBtn');
 const form = document.getElementById('myform');
 const result = document.getElementById('result');
+let isClicked = false;
 async function fetchCall(basecode, code, amount) {
     const apiKey = "9474710233a934aaf592e187";
     const res = await fetch(`https://v6.exchangerate-api.com/v6/${apiKey}/pair/${basecode}/${code}/${amount}`);
@@ -294,12 +295,15 @@ const formattedNumber = (number) => {
     return formattedNumber;
 };
 
+
 form.addEventListener("submit", (e) => {
     e.preventDefault();
-    btn.style.backgroundColor = 'red';
     const baseCurrency = document.getElementById('currency1');
     const convertCurrency = document.getElementById('currency2');
     const currAmount = document.getElementById('amountInCurr');
+    isClicked = !isClicked;
+    const colorValue = isClicked? "darkgreen" : "red";
+    btn.style.backgroundColor = `${colorValue}`;                           
     if (currAmount.value == "") {
         e.preventDefault();
         alert("You can't convert the value of being broke genius");

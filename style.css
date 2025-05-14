@@ -3,3 +3,10 @@
     background-color: hsl(300, 70%, 20%);
     color: white;
 }
+#currBtn {
+    background-color: darkgreen;
+    color: white;
+    padding: .625rem;
+    border-radius: .3125rem;
+    border: none;
+}
