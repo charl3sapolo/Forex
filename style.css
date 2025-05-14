@@ -1,0 +1,5 @@
+#currBtn:hover {
+    box-shadow: 0.1250rem 0.1250rem 0.1250rem grey;
+    background-color: hsl(300, 70%, 20%);
+    color: white;
+}
