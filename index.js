@@ -296,6 +296,7 @@ const formattedNumber = (number) => {
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
+    btn.style.backgroundColor = 'red';
     const baseCurrency = document.getElementById('currency1');
     const convertCurrency = document.getElementById('currency2');
     const currAmount = document.getElementById('amountInCurr');
